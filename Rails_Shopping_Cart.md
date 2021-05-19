@@ -326,7 +326,7 @@ end
 # See Order section below for explanation of new_order_path
 <%= link_to "Proceed to checkout", new_order_path %><br>
 #
-<%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}
+<%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>
 ```
 
 **Model Helpers**: Add Model helper methods to calculate LineItem total_price and Cart Sub_total:  
