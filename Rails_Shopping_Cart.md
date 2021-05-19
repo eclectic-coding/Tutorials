@@ -341,7 +341,7 @@ class LineItem < ActiveRecord::Base
 
   # LOGIC
   def total_price
-    self.quantity * self.product.price
+    quantity * product.price
   end
 end
 
@@ -352,10 +352,10 @@ class Cart < ActiveRecord::Base
   # LOGIC
   def sub_total
     sum = 0
-    self.line_items.each do |line_item|
+    line_items.each do |line_item|
       sum+= line_item.total_price
     end
-    return sum
+    sum
   end
 end
 ```
